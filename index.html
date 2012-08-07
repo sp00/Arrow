@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Arrow</title>
+
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/prototype/1.7.0.0/prototype.js"></script>
+		<script type="text/javascript" src="scripts/library/d3.v2.min.js"></script>
+		<script type="text/javascript" src="scripts/library/dsframework.js"></script>
+		<script type="text/javascript" src="scripts/library/ucsv-1.1.0.js"></script>
+
+		<script type="text/javascript" src="scripts/widgets/interactions.js"></script>
+		<script type="text/javascript" src="scripts/widgets/pie.js"></script>
+		<script type="text/javascript" src="scripts/widgets/map.js"></script>
+		<script type="text/javascript" src="scripts/widgets/line.js"></script>
+
+		<script type="text/javascript" src="scripts/main.js"></script>
+		<script type="text/javascript" src="scripts/utilities/cookie.js"></script>
+		<script type="text/javascript" src="scripts/login.js"></script>
+		<script type="text/javascript" src="scripts/widget.js"></script>
+		<script type="text/javascript" src="scripts/available.js"></script>
+		<script type="text/javascript" src="scripts/loading.js"></script>
+		<script type="text/javascript" src="scripts/data.js"></script>
+		<script type="text/javascript" src="scripts/threading.js"></script>
+
+		<script type="text/javascript" src="/scripts/data/world-countries.js"></script>
+
+		<link rel="stylesheet" href="styles/default.css" type="text/css" media="screen" title="main screen css" charset="utf-8">
+		<link rel="stylesheet" href="styles/animations.css" type="text/css" media="screen" title="main screen css" charset="utf-8">
+		<link rel="stylesheet" href="styles/print.css" type="text/css" media="print" />
+    </head>
+    <body>
+
+    	<!-- Arrow logo -->
+    	<header></header>
+
+    	<div id="interactions"></div>
+
+    	<section id="grid">
+
+    		<!-- Signin form -->
+			<form id="signin">
+				<!-- login form -->
+				<div class="left">
+					<input type="text" name="username" placeholder="Username" id="username" />
+					<input type="text" name="api-key" placeholder="API Key" id="apikey" />
+					<input type="text" name="hash" placeholder="Stream Hash" id="hash" />
+					<input type="submit" id="submit" value="Dashboardify" />
+					<label class="remember">
+						<input type="checkbox" name="remember" id="remember" />
+						Save?
+					</label>
+				</div>
+
+				<!-- upload form -->
+				<div class="right">
+					<p>Upload your exported DataSift Recording or Historic. Max file size 500mb.</p>
+					<input type="file" name="upload" id="upload" style="display: none;" />
+					<input type="button" id="fileSelect" value="Upload File" />
+				</div>
+			</form>
+
+    	</section>
+
+
+
+
+
+
+		<!--
+		<a href="http://github.com" id="github">
+			<span class="large">Yep, we're open source</span>
+			<span class="small">Fork Arrow on GitHub</span>
+		</a>
+		-->
+
+
+
+		<section id="available" style="display: none">
+			<ul id="list" style="display: none">
+			</ul>
+			<h2>Available Widgets</h2>
+		</section>
+    </body>
+</html>

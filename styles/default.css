@@ -1,0 +1,468 @@
+/**
+ * CSS file for Arrow
+ *
+ * @author Daniel Saxil-Nielsen
+ */
+
+
+
+/* Typography ---------------------------------------------------------------------------------- */
+
+/* Din light */
+@font-face {
+    font-family: 'DINLight';
+    src: url('/fonts/din-light-webfont.eot');
+    src: url('/fonts/din-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/din-light-webfont.woff') format('woff'),
+         url('/fonts/din-light-webfont.ttf') format('truetype'),
+         url('/fonts/din-light-webfont.svg#DINLight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Din Regular */
+@font-face {
+    font-family: 'DINRegular';
+    src: url('/fonts/din-regular-webfont.eot');
+    src: url('/fonts/din-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/din-regular-webfont.woff') format('woff'),
+         url('/fonts/din-regular-webfont.ttf') format('truetype'),
+         url('/fonts/din-regular-webfont.svg#DINRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body { 
+	color: #434343;
+	font-size: 12px;
+	font-family: Helvetica,Arial,sans-serif;
+}
+
+h1, h2 {
+	font-family: DINRegular,Helvetica,Arial,sans-serif;
+}
+
+
+/* Layout -------------------------------------------------------------------------------------- */
+
+html { min-height: 100%; }
+body {
+	background: #EFEFEF;
+	margin: 0;
+	padding: 0;
+}
+
+/* grid */
+.g1, .g2, .g3, .g4 {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	float: left;
+}
+
+.g1 { width: 25%; }
+.g2 { width: 50%; }
+.g3 { width: 75%; }
+.g4 { width: 100%; }
+
+.visulise #grid { margin: 20px 20px 20px 70px; }
+/* clear every 5th item */
+#grid .g1:nth-child(4n+5) { clear: left; }
+/* clear every 3rd item */
+#grid .g2:nth-child(2n+3) { clear: left; }
+
+@media screen and (max-width: 1200px) {
+	.g1 { width: 50%; }
+	.g2, .g3, .g4 { width: 100%; }
+
+	#grid .g1:nth-child(2n+3) { clear: left; }
+}
+
+@media screen and (max-width: 480px) {
+	.g1, .g2, .g3, .g4 { width: 100%; }
+}
+
+
+/* Signin Form --------------------------------------------------------------------------------- */
+
+form {
+	background: #FFFFFF; 
+	border: 1px solid #DCDCDC;
+	margin: 100px auto 0; 
+	width: 750px; 
+	overflow: hidden;
+	-webkit-animation: fade-moment-in 0.5s ease-out;
+	-moz-animation: fade-moment-in 0.5s ease-out;
+	-ms-animation: fade-moment-in 0.5s ease-out;
+}
+
+form input {
+	border: 1px solid #E5E5E5; 
+	font-size: 18px;
+	margin: 10px 0; 
+	padding: 10px;
+	width: 270px; 
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	-webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+	-moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+	-ms-transition: border linear 0.2s, box-shadow linear 0.2s;
+	-o-transition: border linear 0.2s, box-shadow linear 0.2s;
+}
+
+form input:first-child { margin-top: 0; }
+form input:last-child { margin-bottom: 0; }
+
+form input:focus {
+	border: 1px solid #fd9846; outline: 0;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(253, 152, 70, 0.6);
+	-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(253, 152, 70, 0.6);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(253, 152, 70, 0.6);
+	-webkit-transition: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(253, 152, 70, 0.6);
+	-moz-transition: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(253, 152, 70, 0.6);
+	-ms-transition: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(253, 152, 70, 0.6);
+	-o-transition: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(253, 152, 70, 0.6);
+}
+
+form input[type="submit"], form input[type="button"] {
+	background-color: #FAA732;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fca763), color-stop(100%,#fd9846));
+	background: -webkit-linear-gradient(top, #fca763 0%,#fd9846 100%);
+	background: -moz-linear-gradient(to bottom, #fca763 0%,#fd9846 100%);
+	background: -o-linear-gradient(to bottom, #fca763 0%,#fd9846 100%);
+	background: -ms-linear-gradient(to bottom, #fca763 0%,#fd9846 100%);
+	background: linear-gradient(to bottom, #fca763 0%,#fd9846 100%);
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	color: #FFFFFF;
+	cursor: pointer;
+	width: 200px;
+	display: inline-block;
+	font-family: DINLight, Helvetica, Arial, sans-serif;
+	text-shadow: rgba(0,0,0,0.5) 0 -1px 0;
+	margin: 0;
+}
+
+form input[type="submit"]:hover, form input[type="button"]:hover {
+	background-color: #FAA732;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fd9846), color-stop(100%,#fca763));
+	background: -webkit-linear-gradient(top, #fd9846 0%,#fca763 100%);
+	background: -moz-linear-gradient(to bottom, #fd9846 0%,#fca763 100%);
+	background: -o-linear-gradient(to bottom, #fd9846 0%,#fca763 100%);
+	background: -ms-linear-gradient(to bottom, #fd9846 0%,#fca763 100%);
+	background: linear-gradient(to bottom, #fd9846 0%,#fca763 100%);
+}
+
+form input[type="checkbox"] {
+	margin: 0;
+	display: inline-block;
+	width: auto;
+}
+
+input::-webkit-input-placeholder { color: #DCDCDC; }
+input:-moz-placeholder { color: #DCDCDC; }
+
+
+form .left { float: left; width: 294px; padding: 40px; border-right: 1px solid #DCDCDC; }
+form .left .remember { margin: 0 0 5px 10px; display: inline-block; cursor: pointer; }
+form .left input[type="submit"] { margin-top: 10px; }
+
+form .right { float: right; width: 295px; padding: 40px; }
+form .right p { margin-top: 0; font-size: 14px; }
+form .right input { margin: 50px 45px; }
+
+/* Header  ------------------------------------------------------------------------------------- */
+
+header {
+	background: url('/images/icon.png') no-repeat center center;
+	height: 100px;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+.processing header { display: none; }
+
+.visulise header { width: 50px; height: 100%; bottom: 0; background: #434343 url('/images/arrow.png') no-repeat center 10px; position: fixed; }
+
+/* Github link --------------------------------------------------------------------------------- */
+
+#github { 
+	background: url('../images/octocat.png') no-repeat top center;
+	color: #434343;
+	display: block;
+	line-height: 24px;
+	margin: 40px auto; 
+	padding-top: 50px;
+	text-align: center;
+	text-decoration: none;
+	width: 200px;
+}
+
+#github .large { 
+	font-family: DINRegular,Helvetica,Arial,sans-serif; 
+	font-size: 18px;
+}
+
+#github .small {
+	color: #ff983b;
+}
+
+/* Widget ------------------------------------------------------------------------------------ */
+
+.widget {
+	padding: 20px 10px;
+}
+
+.widget .wrap {
+	background: #FFFFFF;
+	border: 1px solid #DCDCDC;
+	min-height: 100px;
+	overflow: hidden;
+	padding: 20px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.widget .header { overflow: hidden; }
+.widget .header h3 {
+	float: left; font-weight: normal; font-size: 18px; margin: 0 0 20px 0;
+	font-family: DINRegular,Helvetica,Arial,sans-serif;
+}
+
+.widget .labels { margin: 20px 0 0 0; }
+.widget .labels .label { 
+	display: inline-block;  
+	padding: 5px 5px 5px 15px; 
+	position: relative;
+	width: 45%;
+	margin-right: 5%;
+	overflow: hidden;
+	top: 7px;
+	white-space: nowrap;	
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box; 
+}
+
+.widget .header .remove {
+	background: url('../images/remove.png') no-repeat;
+	background-size: 12px 12px;
+	cursor: pointer;
+	height: 12px;
+	width: 12px;
+	float: right;
+	opacity: 0.5;
+	margin-top: 6px;
+}
+
+.widget .labels .label .key { height: 10px; left: 0; position: absolute; width: 10px; }
+
+/* center the SVG's */
+.widget svg { display: block; margin: 0 auto; }
+ 
+
+/* Interactions ------------------------------------------------------------------------------- */
+
+#interactions { background: #FFFFFF; height: 300px; padding-top: 40px; margin: 0; }
+#interactions:empty { height: 0; padding: 0; margin: 0; }
+.interactions-line { stroke: #E5E5E5; }
+.interactions-label { fill: #ADADAD; font-family: Helvetica,Arial,sans-serif; font-size: 12px; }
+.interactions { stroke: #fd9846; fill: none; }
+.interactions-area { fill: #EFEFEF; }
+
+.interactions-total { font-size: 80px; font-family: DINRegular,Helvetica,Arial,sans-serif; position: absolute; top: 40px; left: 70px; line-height: 50px; }
+.interactions-total span { font-size: 24px; }
+
+
+/* Processing --------------------------------------------------------------------------------- */
+
+
+#waiting {
+	background: #FFFFFF; 
+	border: 1px solid #E5E5E5;
+	margin: 100px auto; 
+	padding: 20px; 
+	width: 500px; 
+	text-align: center;
+	-webkit-animation: fade-moment-in 0.5s ease-out;
+	-moz-animation: fade-moment-in 0.5s ease-out;
+	-ms-animation: fade-moment-in 0.5s ease-out;
+}
+#waiting span { font-size: 24px; font-family: DINRegular,Helvetica,Arial,sans-serif; }
+#waiting .progress { margin-top: 20px; height: 24px; }
+#waiting .progress .bar { height: 24px; }
+
+#waiting.small {
+	background: #434343;
+	background: rgba(0, 0, 0, 0.75);
+	position: fixed; bottom: 40px; right: 40px;
+	padding: 10px; width: 120px;
+	margin: 0;
+}
+#waiting.small .progress { margin: 0; height: 12px; }
+#waiting.small span { display: none; }
+
+
+/* Available ---------------------------------------------------------------------------------- */
+
+
+#available {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	top: 0;
+	border-left: 5px solid rgba(56,56,56,0.9);
+	text-align: center;
+	line-height: 0;
+}
+
+#available.enter { 
+	-webkit-animation: fade-in-left 0.5s ease-out;
+	-moz-animation: fade-in-left 0.5s ease-out;
+	-ms-animation: fade-in-left 0.5s ease-out;
+}
+#available.exit { 
+	-webkit-animation: fade-out-left 0.5s ease-out;
+	-moz-animation: fade-out-left 0.5s ease-out;
+	-ms-animation: fade-out-left 0.5s ease-out;
+}
+
+#available h2 {
+	border-bottom: 40px solid rgba(56,56,56,0.9);
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    height: 0;
+    width: 175px;
+	margin: 0;
+	line-height: 40px;
+	float: left;
+	font-family: DINLight,Helvetica,Arial,sans-serif;
+	font-weight: normal;
+	color: #FFFFFF;
+	cursor: pointer;
+	-webkit-transform-origin: 0 100%;
+	-moz-transform-origin: 0 100%;
+	-o-transform-origin: 0 100%;
+	-ms-transform-origin: 0 100%;
+	transform-origin: 0 100%;
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	transform: rotate(90deg);
+}
+
+#available #list {
+	background: #434343;
+	background: rgba(56,56,56,0.9);
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-align: left;
+	float: left;
+	height: 100%;
+}
+
+#available #list li {
+	color: #FFFFFF; cursor: pointer; margin: 0 20px; padding: 5px; line-height: 20px;
+}
+
+/* Progress bar -------------------------------------------------------------------------------- */
+
+.progress {
+	height: 18px;
+	margin-bottom: 18px;
+	overflow: hidden;
+	background-color: #F7F7F7;
+	background-repeat: repeat-x;
+	background: -webkit-linear-gradient(to bottom, whiteSmoke 0%,#F9F9F9 100%);
+	background: -moz-linear-gradient(to bottom, whiteSmoke 0%,#F9F9F9 100%);
+	background: -o-linear-gradient(to bottom, whiteSmoke 0%,#F9F9F9 100%);
+	background: -ms-linear-gradient(to bottom, whiteSmoke 0%,#F9F9F9 100%);
+	background: linear-gradient(to bottom, whiteSmoke 0%,#F9F9F9 100%);
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+	box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+	
+}
+
+.progress .bar {
+	width: 0;
+	height: 18px;
+	font-size: 12px;
+	color: white;
+	text-align: center;
+	background-color: #fca763;
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fca763), to(#fd9846));
+	background-repeat: repeat-x;
+
+	-webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+	box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+
+	-webkit-animation: progress-bar-stripes 2s linear infinite;
+	-moz-animation: progress-bar-stripes 2s linear infinite;
+	-ms-animation: progress-bar-stripes 2s linear infinite;
+	-o-animation: progress-bar-stripes 2s linear infinite;
+	animation: progress-bar-stripes 2s linear infinite;
+
+	-webkit-background-size: 40px 40px;
+	-moz-background-size: 40px 40px;
+	background-size: 40px 40px;
+
+	background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+	background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+	background-image: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+	background-image: -ms-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+	background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+
+
+/* MISC ---------------------------------------------------------------------------------------- */
+
+
+
+.pie .percentage { font-family: DINRegular,Helvetica,Arial,sans-serif; font-size: 20px; fill: #434343; }
+
+
+#tooltip { position: absolute; background: rgba(0, 0, 0, 0.75); padding: 10px; border-radius: 5px; color: #FFFFFF; }
+
+
+
+.points circle { fill: #fd9846; opacity: 0.2; }
+.country { fill: #DCDCDC; }
+line {stroke: red;}
+
+
+.line-points { fill: none; stroke: #fd9846; }
+
+
+.line-axis path {
+	fill: none;
+    stroke: #DCDCDC;
+    shape-rendering: crispEdges;
+}
+
+.line-gridline {
+	fill: none;
+	stroke: #DCDCDC;
+	shape-rendering: crispEdges;
+}
+
+.line-axis text {
+    font-family: sans-serif;
+    font-size: 10px;
+}
+.line-axis .tick { stroke: #DCDCDC; }
+.line-axis.y .tick { display: none; }
+
+.line-axis.y .domain { display: none;}
+

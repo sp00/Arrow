@@ -1,0 +1,6 @@
+
+body { background: #FFFFFF;}
+
+.widget svg { display: inline; }
+.widget .remove { display: none; }
+.widget .overlay { display: none; }
